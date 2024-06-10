@@ -11,4 +11,8 @@
     <PackageReference Include="SteamKit2" Version="2.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SteamTrade\SteamTrade.csproj" />
+  </ItemGroup>
+
 </Project>

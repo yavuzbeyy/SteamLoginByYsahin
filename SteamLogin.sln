@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamLogin", "SteamLogin.csproj", "{A4CAF5C5-4036-436B-8DC7-35A678C23E79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamTrade", "..\SteamTrade\SteamTrade.csproj", "{BB763D3E-3813-4636-953D-B5E099744666}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A4CAF5C5-4036-436B-8DC7-35A678C23E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4CAF5C5-4036-436B-8DC7-35A678C23E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4CAF5C5-4036-436B-8DC7-35A678C23E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB763D3E-3813-4636-953D-B5E099744666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB763D3E-3813-4636-953D-B5E099744666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB763D3E-3813-4636-953D-B5E099744666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB763D3E-3813-4636-953D-B5E099744666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

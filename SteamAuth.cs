@@ -9,14 +9,16 @@ namespace SteamLogin
 {
     public class SteamAuth
     {
-        public SteamClient steamClient;
-        public CallbackManager manager;
-        public SteamUser steamUser;
-        public bool isRunning;
+        private SteamClient steamClient;
+        private CallbackManager manager;
+        private SteamUser steamUser;
+        private bool isRunning;
 
-        public string userName = "";
-        public string password = "";
-        public string authCode;  // Steam Guard authentication code
+        private string userName = "flyingpig83";
+        private string password = "7Rke:YrE4j6!Jmc";
+        private string authCode;  // Steam Guard authentication code
+
+        private SteamTrade.SteamTrade steamTrade;
 
         public void connectToSteam()
         {
@@ -42,7 +44,7 @@ namespace SteamLogin
             }
         }
 
-        public void OnConnected(SteamClient.ConnectedCallback callback)
+        private void OnConnected(SteamClient.ConnectedCallback callback)
         {
             Console.WriteLine("Connected to Steam! Logging in '{0}'...", userName);
 
@@ -60,7 +62,7 @@ namespace SteamLogin
             });
         }
 
-        public void OnDisconnected(SteamClient.DisconnectedCallback callback)
+        private void OnDisconnected(SteamClient.DisconnectedCallback callback)
         {
             Console.WriteLine("Disconnected from Steam");
 
@@ -71,13 +73,17 @@ namespace SteamLogin
             }
         }
 
-        public void OnLoggedOn(SteamUser.LoggedOnCallback callback)
+        private void OnLoggedOn(SteamUser.LoggedOnCallback callback)
         {
             if (callback.Result == EResult.OK)
             {
                 Console.WriteLine("Successfully logged on!");
 
                 // Perform actions after successful logon
+                Console.WriteLine("Logged in User SteamID: {0}", steamUser.SteamID);
+
+                // SteamTrade nesnesi oluşturuluyor
+                steamTrade = new SteamTrade.SteamTrade(steamClient, steamUser);
 
             }
             else
@@ -87,7 +93,7 @@ namespace SteamLogin
             }
         }
 
-        public void OnLoggedOff(SteamUser.LoggedOffCallback callback)
+        private void OnLoggedOff(SteamUser.LoggedOffCallback callback)
         {
             Console.WriteLine("Logged off of Steam: {0}", callback.Result);
         }
