@@ -14,8 +14,8 @@ namespace SteamLogin
         private SteamUser steamUser;
         private bool isRunning;
 
-        private string userName = "flyingpig83";
-        private string password = "7Rke:YrE4j6!Jmc";
+        private string userName = "";
+        private string password = "";
         private string authCode;  // Steam Guard authentication code
 
         private SteamTrade.SteamTrade steamTrade;
